@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href=data:image/png;base64,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>
+    <title>Ramya</title>
+
+</head>
+<head>
+    <style>
+     .h1{
+        float:left;
+        font-size: 200%;
+        color:  #16507b;
+
+    }
+    header{
+        background-color:white; 
+        height: 0.8cm; 
+        line-height: 50px;
+        padding: 1.5rem;
+    }
+    button{
+        background-color:#2487ce;;
+        border-radius: 6px;
+        padding: 0.6rem 1rem;
+        font-weight:bold;
+        color: white;
+    }
+    select{
+      padding: 0.3rem 0.4;
+      font-size: 15px;
+      border-radius: 2px;
+    }
+    .header{
+        float: right;
+        font-size: 20px;
+
+    }
+    .header a{
+        padding: 0rem 0.7rem 0rem ;
+        padding-top: 2px;;
+    }
+    .header a:hover{
+      background-color:#2487ce;
+
+    }
+    .header a{
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .backgroundimage{
+        background-image: url("https://img.freepik.com/free-vector/white-abstract-background_23-2148806276.jpg?size=626&ext=jpg");
+        height: 18cm;
+        width: 100%;
+
+    }
+    .home{
+        text-align: center;
+        padding:3rem 0rem 3rem;
+    }
+    .home b{
+        font-size: 60px;
+        color:  #124265;
+    }
+    .home h2{
+      color:  #5e5e5e;
+    }
+    .button button{
+        background-color:#2487ce;
+        border-radius: 8px;
+        padding: 1rem 3rem;
+        font-weight:bold;
+        color: white;
+    
+
+    }
+    .row{
+      width:22%;
+      float:left;
+      margin: 1rem;
+      padding-top: 3rem;
+    }
+
+.card{
+  margin: 1rem;
+  height:5cm;
+  background:white;
+  padding-top: 2rem;
+  text-align: left;
+}
+.card h3 {
+    color:#124265;
+    padding-left: 6%;
+    padding-top: 6%;
+}
+.card p{
+    padding-left: 6%;
+      color:  #5e5e5e;
+}
+.about{
+        text-align: center;
+        width: 100%;
+        display: inline-block;
+        padding-top: 6rem;
+    }
+    .about h1{
+      font-size: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #124265;
+      margin-bottom: 1rem;
+    
+    }
+    .about h3{
+      font-size: 17px;
+    color: #919191;
+    }
+    .about{
+      font-size: 20px;
+    color: #444444;
+    line-height: 1;
+    }
+    .abc{
+        width: 100%;
+        height: 5cm;
+        padding-bottom: 2rem;
+    }
+    .xyz{
+      float:left;
+      width:50%
+    }
+    .xyz p{
+        padding: 0rem 1rem}
+    
+
+    .abcd{
+        float:left;
+        width: 50%;
+    }
+    .abcd p{
+        padding: 0rem 1.5rem}
+
+    .abcd button{
+    float:left ;
+    margin: 2rem;
+    color: #2487ce;
+    padding: 0.8rem 1.5rem;
+    background-color: white;
+    border: 2px solid #2487ce;
+    font-size: 14px;
+    }
+    .abcd :hover{
+    background: #2487ce;
+    color: #fff;
+   
+}
+.abcd a{
+  text-decoration: none;
+}
+    .row2{
+      width:25%;
+      float:left;
+}
+.card2{
+  text-align: center;
+  background:#f8fbfe;
+  padding: 4rem;
+  margin-top: 2rem;
+  color: #1e6ca6;
+
+}
+.card2 b{
+    font-size: 200%;
+}
+.image{
+    width: 50%;
+    float:left;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.image img{
+    height: 9cm;
+    width: 95%;
+    padding:2rem;
+
+}
+
+.text{
+    width:50%;
+    height: 11cm;
+    float:left;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+.cards1{
+    width: 100%;
+    margin:2rem;
+}
+.section-bg {
+    background-color: #f8fbfe;}
+
+.card3{
+  height:3cm;
+  text-align: center;
+  background:rgb(220, 233, 236);
+  padding-top :2rem;
+
+}  
+.row3{width:16.66%;
+      float:left;
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+
+}  .row4{
+      width:31%;
+      float:left;
+      margin: 1rem;
+    }
+
+.card4{
+  margin: 1rem;
+  height:10cm;
+  background:whitesmoke;
+  text-align: center;
+}
+.card4 p{
+    background-color:lightblue;
+    padding:1rem;
+} 
+.TESTIMONIALS{
+    text-align: center;
+    margin-top:2rem;}
+
+    .section-bg {
+    background-color: #f8fbfe;}
+
+    .services{
+        text-align: center;
+        padding:1rem 0rem 3rem;
+    }
+    .row5{
+      width:31%;
+      float:left;
+      margin: 1rem;
+    }
+    .card5{
+  margin: 1rem;
+  height:6cm;
+  background:white;
+  text-align: center;
+  padding-top: 6rem;
+  color:blue;
+  padding:2rem
+}
+.card5 p{
+    padding:1rem;
+    color: black;
+    text-align: center;}
+
+.call {
+    background: #2487ce;
+    padding: 1rem 3rem;
+    color: #fff;
+    font-size:16px;
+    text-align: center;
+    
+    border: 2px solid #fff;
+}
+.call button{
+    padding:1rem;
+    border-radius: 5px;
+}
+.call button:hover{
+  background: #fff;
+    color: #2487ce;
+}
+.port{
+        text-align: center;
+        padding:3rem 0rem 2rem;}
+
+
+    .pics{
+        width:33.33%;
+        
+    }
+.container{
+    width:100%
+}
+.teamhead{
+    text-align: center;
+    padding:2rem 0rem 2rem 0rem;
+
+}
+
+.card6 h2{
+  text-align: center;
+}
+.pic1{
+  width:23.9%;
+  float:left;
+  margin: 0.5rem;
+
+}
+.pic1 img{
+  width:300px;
+  width: 100%;
+}
+.pic{
+  width:32%;
+  float:left;
+  margin: 0.5rem;
+}
+  .pic img{
+      width:300px;
+      width:100%;
+      padding: 2rem;
+  }
+  .app a{
+    padding: 0rem 0.8rem 0rem ;
+
+  } 
+  .price{
+      text-align: center;
+      margin: 2rem;
+  }
+  .card8{
+  margin: 0.1rem;
+  height:12cm;
+  background:whitesmoke;
+  text-align: center;
+  padding-top: 3rem;
+}
+.card8 button{
+    padding:1rem;
+    margin:2rem;
+    background: whitesmoke;
+}
+.card8 h2{
+    color:blue
+
+}
+.img2 {
+    margin: 1.5rem 10rem;
+    border-radius: 360px;
+    width: 120px;
+    align-items: center;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="h1" >
+            <hl>Ramya Page</hl>
+          </div>
+        <div class="header">
+             <a href="#home">Home</a>
+             <a href="#about">About</a>
+             <a href="#services">Service</a>
+             <a href="#port">Portfolio</a>
+             <a href="#team">Team</a> 
+             <a href="#price">Price</a>
+             <select>
+              <option value="DROPDOWN">Drop Down</option>
+              <option value="DROPDOWN">DROPDOWN_1</option>
+              <option value="DROPDOWN">DROPDOWN_2</option>
+              <option value="DROPDOWN">DEEPDOWN_3</option>
+              <option value="DROPDOWN">DROPDOWN_4</option>
+              <option value="DROPDOWN">DROPDOWN_5</option>
+          </select>
+             <a href="abc">contact</a>
+             <a href="#"><button>Get Started</button></a>
+            </div>
+    </header>
+<div class="container"> 
+      <div class="backgroundimage">
+        <section  id="home" class="home">
+            <h1><b >Ramya Page Template</b></h1>
+            <h1><b> Website Template</b></h1>
+            <h2>we are the team of python developer</h2>
+            <div class="button">
+           <a href="#about"><button>Get Started</button></a>
+           </div>
+        <div class="container">
+            <div class="row">
+            <div class="card">
+            <h3>Lorem Ipsum</h3>
+            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            </div>
+            </div>
+            <div class="row">
+            <div class="card" >
+            <h3>Sed ut perspiciatis</h3>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            </div>
+            </div>
+            <div class="row">
+            <div class="card" >
+            <h3>Magni Dolores</h3>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            </div>
+            </div>
+            <div class="row">
+            <div class="card" >
+            <h3>Magni Dolores</h3>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            </div>
+            </div>
+      </div>
+      </section> 
+      </div>
+<div class="container">
+  <section id="about" class="about">      
+       <h1>About us</h1>
+       <h3>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.</h3>
+    
+   
+    <div class="abc">
+      <div class="xyz">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <ul>
+      <li><i>Ullamco laboris nisi ut aliquip ex ea commodo consequat<i></li>
+      <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+      <li> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+        </ul>
+      </div>
+      <div class="abcd">
+         <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+             <button><a href="#home">Learn more</a></button>
+      </div>
+    </div>
+  </section>
+</div>
+
+    <div class="container">
+        <div class="row2">
+        <div class="card2">
+        <b>65</b>
+        <p>Happy Clients</p>
+        </div>
+        </div>
+        <div class="row2">
+        <div class="card2">
+        <b>85</b>
+        <p>Projects</p>
+        </div>
+        </div>
+        <div class="row2">
+        <div class="card2">
+       <b>30</b>
+        <p>Years of Experience</p>
+        </div>
+        </div>
+        <div class="row2">
+        <div class="card2">
+        <b>20</b>
+        <p>Awards</p>
+        </div>
+        </div>
+      </div>
+        
+        <div class="container">
+            <div class="image">
+                <img src="https://bootstrapmade.com/demo/templates/OnePage/assets/img/about-video.jpg" >
+            </div>
+            <div class="text">
+                
+              <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                
+                <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit.
+                Voluptate repellendus pariatur reprehenderit corporis sint.</p>
+                <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</p>
+               <p> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p> 
+               <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </p>
+            </div>
+      </div>
+<section class="section-bg">
+      <div class="cards1">
+        <div class="row3">
+        <div class="card3">
+        <h1><i>Whatsapp</i></h1>
+        </div>
+        </div>
+        <div class="row3">
+        <div class="card3">
+       <h1><i>Facebook</i></h1>
+        </div>
+        </div>
+        <div class="row3">
+        <div class="card3">
+        <h1><i>instagram</i></h1>
+        </div>
+      </div>
+      <div class="row3">
+      <div class="card3">
+      <h1><i>You Tube</i></h1>
+      </div>  
+      </div>
+      <div class="row3">
+        <div class="card3">
+        <h1><i>Share Chat</i></h1>
+        </div>  
+        </div>
+        <div class="row3">
+            <div class="card3">
+            <h1><i>Messenger</i></h1>
+            </div>  
+            </div>
+      </div>
+</section>
+
+      <div class="TESTIMONIALS">
+          <h1>TESTIMONIALS</h1>
+       <P>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
+         Quia fugiat sit in iste officiis commodi quidem hic quas.</P>
+          
+         <div class="row4">
+            <div class="card4">
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. 
+                Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                <img class="img2" src="https://bootstrapmade.com/demo/templates/OnePage/assets/img/team/team-2.jpg">
+                <b>Sarah Jhonson</b>
+            </div>
+            </div>
+            <div class="row4">
+            <div class="card4">
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
+                 Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                 <img class="img2" src="https://bootstrapmade.com/demo/templates/OnePage/assets/img/team/team-2.jpg">
+                 <b>Sarah Jhonson</b>
+            </div>
+            </div>
+            <div class="row4">
+            <div class="card4">
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. 
+                Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                <img class="img2" src="https://bootstrapmade.com/demo/templates/OnePage/assets/img/team/team-2.jpg">
+                <b>Sarah Jhonson</b>
+            </div>
+            </div>
+    </div>
+
+      <section   id="services" class='section-bg'>
+        <div class="services"> 
+        <div class="container">
+     <h1>SERVICES</h1> 
+    <p>
+     Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate.<br> Et nemo qui impedit suscipit alias ea.Quia fugiat sit in iste officiis commodi quidem hic quas.    
+      </p>
+            <div class="row5">
+            <div class="card5">
+            <h3>Lorem Ipsum</h3>
+            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            </div>
+            </div>
+            <div class="row5">
+            <div class="card5" >
+            <h3>Sed ut perspiciatis</h3>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            </div>
+            </div>
+            <div class="row5">
+            <div class="card5" >
+            <h3>Magni Dolores</h3>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            </div>
+            </div>
+            <div class="row5">
+                <div class="card5">
+                <h3>Lorem Ipsum</h3>
+                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                </div>
+                </div>
+                <div class="row5">
+                <div class="card5" >
+                <h3>Sed ut perspiciatis</h3>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                </div>
+                </div>
+                <div class="row5">
+                <div class="card5" >
+                <h3>Magni Dolores</h3>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                </div>
+                </div>
+              </div>
+        </div>
+      </section>
+
+      <section class="call">
+          <h1>CALL TO ACTION</h1>
+         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <button>Call to Action</button>
+         </div>        
+      </section>
+
+      <section id="port" class="port">
+        <h1>PORTFOLIO </h1>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. 
+            Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            <div class="app">
+                <a href="">App</a>
+                <a href="">All</a>
+                <a href="">card</a>
+                <a href="">web</a>
+                </div>
+            <div class ="card7">
+                <div class="pic">
+                  <img src="https://bootstrapmade.com/demo/templates/OnePage/assets/img/team/team-3.jpg">
+                </div>
+                </div>
+                 <div class="card7">
+                 <div class="pic">
+                 <img src="https://bootstrapmade.com/demo/templates/OnePage/assets/img/team/team-3.jpg">
+                 </div>
+                 </div>
+                 <div class="card7">
+                 <div class="pic">
+                 <img src="https://bootstrapmade.com/demo/templates/OnePage/assets/img/team/team-3.jpg" >
+                 </div>
+                 </div>
+      </section>
+                
+            
+
+ <section  id="team" class="teamhead">
+   <div class="container">
+    <h1>Team</h1>
+       <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit.
+       Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      
+       <div class ="card6">
+       <div class="pic1">
+         <img src="https://bootstrapmade.com/demo/templates/OnePage/assets/img/team/team-3.jpg">
+         <h2>Walter White</h2>
+       </div>
+       </div>
+        <div class="card6">
+        <div class="pic1">
+        <img src="https://bootstrapmade.com/demo/templates/OnePage/assets/img/team/team-3.jpg">
+        <h2>Walter White</h2>
+        </div>
+        </div>
+        <div class="card6">
+        <div class="pic1">
+        <img src="https://bootstrapmade.com/demo/templates/OnePage/assets/img/team/team-3.jpg" >
+        <h2>Walter White</h2>
+        </div>
+        </div>
+       <div class="card6">
+       <div class="pic1">
+        <img src="https://bootstrapmade.com/demo/templates/OnePage/assets/img/team/team-3.jpg">
+        <h2>Walter White</h2>
+        </div>
+        </div>  
+ </div>  
+ </section>
+
+<section id="price" class="price">
+    <h1>PRICING</h1>
+      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. 
+          Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <div class="row4">
+            <div class="card8">
+            <h2>FREE</h2>
+            <h2>0/month</h2>
+            <h3>aide dere</h3>
+            <h3>Nec feugiat nisi</h3>
+            <H3>Nulla at volutpat dola</H3>
+            <p>Pharetra mass</p>
+            <p>Mass ultricies mi</p>
+            <button>Buy Now</button>
+
+            </div>
+            </div>
+            <div class="row4">
+            <div class="card8">
+                <h2>BUSSINESS</h2>
+            <h2>19/month</h2>
+            <h3>aide dere</h3>
+            <h3>Nec feugiat nisi</h3>
+            <H3>Nulla at volutpat dola</H3>
+            <p>Pharetra mass</p>
+            <p>Mass ultricies mi</p>
+            <button>Buy Now</button>
+            
+            </div>
+            </div>
+            <div class="row4">
+            <div class="card8">
+                <h2>DEVELOPER</h2>
+                <h2>29/month</h2>
+                <h3>aide dere</h3>
+                <h3>Nec feugiat nisi</h3>
+                <H3>Nulla at volutpat dola</H3>
+                <p>Pharetra mass</p>
+                <p>Mass ultricies mi</p>
+                <button>Buy Now</button>
+            </div>
+            </div>
+</section>
+</div> 
+     
+  
+</body>
+</html>
